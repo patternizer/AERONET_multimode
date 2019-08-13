@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/5902974/62958465-a505d600-bdee-11e9-8704-81183f95daad.gif)
+![image](https://user-images.githubusercontent.com/5902974/62960288-404c7a80-bdf2-11e9-952e-6fac27da9546.jpg)
 
 # AERONET_multimode
 
@@ -34,7 +34,7 @@ The code is designed to take a 22-element vector Y containing the AVSD as input 
 
 To run the default case (AERONET Almucantar Level 1.5 Version 3: 2 Feb 2016) issue the command:
 
-   >>  [GMM]=multimode([])
+   >> [GMM]=multimode([])
        
 ## License
 
