@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/5902974/59154328-fe0c6300-8a67-11e9-9261-4d79fcf8ee94.png)
+![image](https://user-images.githubusercontent.com/5902974/62958465-a505d600-bdee-11e9-8704-81183f95daad.gif)
 
 # AERONET_multimode
 
@@ -8,17 +8,16 @@ The theory is published in:
 
 Taylor, M., Kazadzis, S., and Gerasopoulos, E.: Multi-modal analysis of aerosol robotic network size distributions for remote sensing applications: dominant aerosol type cases, Atmos. Meas. Tech., 7, 839-858, https://doi.org/10.5194/amt-7-839-2014, 2014. 
 
-[doi.org/10.5194/amt-7-839-2014](https://doi.org/10.5194/amt-7-839-2014)
-
 ## Contents
 
 * `multimode.m` - main script to be run with Matlab
-* `160128_160128_Exeter_MO.siz` - AERONET size distribution test data
-* `160128_10128_Exeter_MO.gif` - AERONET plot of size distribution test data
+* `20160202_20160202_Exeter_MO.siz` - AERONET size distribution test data
+* `20160202_20160202_Exeter_MO.gif` - AERONET plot of size distribution test data
 * `GMM1.jpg` - fit to the test data with a single lognormal mode
 * `GMM2.jpg` - fit to the test data with a two lognormal modes
 * `GMM3.jpg` - fit to the test data with a three lognormal modes
-* `GMM4.jpg` - fit to the test data with a four lognormal modes
+* `BEST.jpg` - best statistical fit to the test data with a four lognormal modes
+* `RUN.mat` - statistics arrays
 
 The first step is to clone the latest AERONET_multimode code and step into the check out directory: 
 
@@ -33,14 +32,9 @@ The code is designed to take a 22-element vector Y containing the AVSD as input 
 
     >> [GMM]=multimode(Y)
 
-To run the default case (AERONET Aerosol Inversions L1.5 Version 2 for EXETER_MO, 28/01/2016, 10:29:08 GMT) issue:
+To run the default case (AERONET Almucantar Level 1.5 Version 3: 2 Feb 2016) issue the command:
 
    >>  [GMM]=multimode([])
-
-Alternatively, issue the commands:
-	 
-   >>  Y = [0.000262,0.001774,0.005377,0.007652,0.005960,0.003439,0.002175,0.002049,0.003043,0.005746,0.009857,0.013233,0.016114,0.019276,0.022546,0.024126,0.022326,0.016942,0.009724,0.003899,0.001043,0.000184];
-   >> [GMM]=multimode(Y)
        
 ## License
 
