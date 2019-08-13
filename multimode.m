@@ -9,7 +9,7 @@ function [GMM]=multimode(Y)
     % "Multi-modal analysis of aerosol robotic network              % 
     % size distributions for remote sensing applications"           % 
     % Atmospheric Measurement Techniques 7, 839-858.                % 
-    % doi:10.5194/amt-7-839-2014                                    %
+    % doi:10.5194/amt-7-839-2014                                    %    
     %                                                               %
     % INPUTS:                                                       %
     % Y  --> 22-bin AERONET aerosol size distribution function      %
@@ -25,15 +25,12 @@ function [GMM]=multimode(Y)
     % DEPENDENCIES:                                                 %
     % none                                                          %
     %                                                               %
-    % Version 1.0 (06/05/2016)                                      %
+    % Version 0.1                                                   %
     % Dr Michael Taylor                                             %
-    % LAP/AUTh: http://lap.physics.auth.gr/faculty.asp?lang=en      %
-    % URL: http://users.auth.gr/mtaylor/                            %
-    % Email (1): mtaylor@auth.gr                                    %
-    % Email (2): patternizer@gmail.com                              %
-    % ORCID: http://orcid.org/0000-0002-3473-3478                   %
-    % ResearchGate: http://bit.ly/1WWrLoJ                           %
-    % GoogleScholar: http://bit.ly/1LAK8io                          %
+    % Department of Meteorology, 3L65                               %
+    % University of Reading, UK                                     %
+    % URL: https://patternizer.github.io                            %
+    % ORCID:http://orcid.org/0000-0002-3473-3478                    %
     %                                                               %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -66,8 +63,8 @@ function [GMM]=multimode(Y)
     FLAG_autodetect     = 1; % 0=specify uppper limit to n-modes, 1=auto (1:8 modes)
     FLAG_method         = 2; % 0=Multiple Regression, 1=Fisher, 2=Subjective
     if isempty(Y)    
-        % AERONET Aerosol Inversions L1.5 (Version 2): EXETER_MO, 28/01/2016, 10:29:08 (GMT)    
-        Y = [0.000262,0.001774,0.005377,0.007652,0.005960,0.003439,0.002175,0.002049,0.003043,0.005746,0.009857,0.013233,0.016114,0.019276,0.022546,0.024126,0.022326,0.016942,0.009724,0.003899,0.001043,0.000184];
+        % AERONET Almucantar Level 1.5 (Version 3): EXETER_MO, 02/02/2016
+        Y = [0.000230,0.000694,0.001512,0.002420,0.003000,0.003193,0.003370,0.004018,0.005674,0.008924,0.013777,0.019057,0.024010,0.028526,0.030638,0.027682,0.019664,0.010864,0.004860,0.001848,0.000615,0.000181];                
     else
     end    
     X                   = [ 0.050000 , 0.065604 , 0.086077 , 0.112939 , 0.148184 , 0.194429 , 0.255105 , 0.334716 , 0.439173 , 0.576227 , 0.756052 , 0.991996 , 1.301571 , 1.707757 , 2.240702 , 2.939966 , 3.857452 , 5.061260 , 6.640745 , 8.713145 , 11.432287 , 15.00000 ];
